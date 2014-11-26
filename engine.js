@@ -396,3 +396,27 @@ var TouchControls = function() {
 	Game.canvas.addEventListener('touchend', this.trackTouch, true)
 	Game.playerOffset = unitWidth + 20
 }
+
+var GamePoints = function(points) {
+	Game.points = points
+	var pointsLength = 8
+	this.draw = function(ctx) {
+		ctx.save()
+
+		ctx.font = "bold 18px arial"
+		ctx.fillStyle = "#fff"
+
+		var txt = "" + Game.points
+
+		var i = pointsLength - txt.length, zeros="";
+		while(i-- > 0) {
+			zeros += '0'
+		}
+
+		ctx.fillText(zeros + txt, 50, 20)
+
+		ctx.restore()
+	}
+
+	this.step = function(dt) {}
+}
