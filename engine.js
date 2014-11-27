@@ -81,31 +81,32 @@ var Game = new function() {
 		bodyTag=document.getElementsByTagName('body')[0];
 		bodyTag.style.height=document.documentElement.clientWidth/screen.width*screen.height+'px';
 		}
-		setTimeout(function(){
-		window.scrollTo(0,1)
-		},
-		0);
 
-		h = window.innerHeight + 2
+		setTimeout(function() {
+			window.scrollTo(0,1)
 
-		container.style.height = h + 'px'
-		container.style.width = w + 'px'
-		container.style.padding = 0
+			h = window.innerHeight + 2
 
-		if(h >= this.canvas.height * 1.75 || w >= this.canvas.height * 1.75) {
-			this.canvasMultiplier = 2
-			this.canvas.width = w / 2
-			this.canvas.height = h / 2
-			this.canvas.style.width = w + "px"
-			this.canvas.style.height = h + "px"
-		} else {
-			this.canvas.width = w
-			this.canvas.height = h
-		}
+			container.style.height = h + 'px'
+			container.style.width = w + 'px'
+			container.style.padding = 0
 
-		this.canvas.style.position = 'absolute'
-		this.canvas.style.left = '0px'
-		this.canvas.style.top = '0px'
+			if(h >= this.canvas.height * 1.75 || w >= this.canvas.height * 1.75) {
+				this.canvasMultiplier = 2
+				this.canvas.width = w / 2
+				this.canvas.height = h / 2
+				this.canvas.style.width = w + "px"
+				this.canvas.style.height = h + "px"
+			} else {
+				this.canvas.width = w
+				this.canvas.height = h
+			}
+
+			this.canvas.style.position = 'absolute'
+			this.canvas.style.left = '0px'
+			this.canvas.style.top = '0px'
+
+		}, 100)
 	}
 }
 
