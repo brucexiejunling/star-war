@@ -73,12 +73,14 @@ var Game = new function() {
 		}
 
 		container.style.height = h * 2 + "px"
-		window.scrollTo(0, 1)
-		h = window.innerHeight + 2
+		setTimeout(function() {
+			window.scrollTo(0, 1)
+			h = window.innerHeight + 2
 
-		container.style.height = h + 'px'
-		container.style.width = w + 'px'
-		container.style.padding = 0
+			container.style.height = h + 'px'
+			container.style.width = w + 'px'
+			container.style.padding = 0
+		}, 0)
 
 		if(h >= this.canvas.height * 1.75 || w >= this.canvas.height * 1.75) {
 			this.canvasMultiplier = 2
