@@ -81,7 +81,10 @@ var Game = new function() {
 		bodyTag=document.getElementsByTagName('body')[0];
 		bodyTag.style.height=document.documentElement.clientWidth/screen.width*screen.height+'px';
 		}
+		setTimeout(function(){
 		window.scrollTo(0,1)
+		},
+		0);
 
 		h = window.innerHeight + 2
 
