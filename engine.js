@@ -95,6 +95,19 @@ var Game = new function() {
 		this.canvas.style.position = 'absolute'
 		this.canvas.style.left = '0px'
 		this.canvas.style.top = '0px'
+		function launchFullscreen(element) {
+		  if(element.requestFullscreen) {
+		    element.requestFullscreen();
+		  } else if(element.mozRequestFullScreen) {
+		    element.mozRequestFullScreen();
+		  } else if(element.webkitRequestFullscreen) {
+		    element.webkitRequestFullscreen();
+		  } else if(element.msRequestFullscreen) {
+		    element.msRequestFullscreen();
+		  }
+		}
+		// 启动全屏!
+		launchFullScreen(document.documentElement); // 整个网页
 	}
 }
 
