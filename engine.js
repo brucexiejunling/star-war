@@ -76,7 +76,8 @@ var Game = new function() {
 		window.scrollTo(0, 1)
 		h = window.innerHeight + 2
 
-		container.style.height = h + 'px'
+		// container.style.height = h + 'px'
+		console.log('container', container.style.height)
 		container.style.width = w + 'px'
 		container.style.padding = 0
 
@@ -358,6 +359,7 @@ var TouchControls = function() {
 		var yLoc = Game.height - unitWidth
 		this.drawSquare(ctx, gutterWidth, yLoc, "\u25C0", Game.keys['left'])
 		this.drawSquare(ctx, unitWidth + gutterWidth, yLoc, "\u25B6", Game.keys['right'])
+		// this.drawSquare(ctx, unitWidth / 2 + gutterWidth, yLoc - unitWidth, "\u25B3", Game.keys['top'])
 		this.drawSquare(ctx, 4*unitWidth, yLoc, "A", Game.keys['fire'])
 		ctx.restore()
 	}
