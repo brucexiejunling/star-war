@@ -72,15 +72,22 @@ var Game = new function() {
 			h = window.innerHeight
 		}
 
-		container.style.height = h * 2 + "px"
-		setTimeout(function() {
-			window.scrollTo(0, 1)
-			h = window.innerHeight + 2
+		// container.style.height = h * 2 + "px"
+		// setTimeout(function() {
+		// 	window.scrollTo(0, 1)
+		// }, 0)
 
-			container.style.height = h + 'px'
-			container.style.width = w + 'px'
-			container.style.padding = 0
-		}, 0)
+		if(document.documentElement.scrollHeight<=document.documentElement.clientHeight){
+		bodyTag=document.getElementsByTagName('body')[0];
+		bodyTag.style.height=document.documentElement.clientWidth/screen.width*screen.height+'px';
+		}
+		window.scrollTo(0,1)
+
+		h = window.innerHeight + 2
+
+		container.style.height = h + 'px'
+		container.style.width = w + 'px'
+		container.style.padding = 0
 
 		if(h >= this.canvas.height * 1.75 || w >= this.canvas.height * 1.75) {
 			this.canvasMultiplier = 2
