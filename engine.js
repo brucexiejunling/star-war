@@ -95,7 +95,7 @@ var Game = new function() {
 		this.canvas.style.position = 'absolute'
 		this.canvas.style.left = '0px'
 		this.canvas.style.top = '0px'
-		function launchFullscreen(element) {
+		function launchFullScreen(element) {
 		  if(element.requestFullscreen) {
 		    element.requestFullscreen();
 		  } else if(element.mozRequestFullScreen) {
