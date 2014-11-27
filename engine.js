@@ -72,11 +72,12 @@ var Game = new function() {
 			h = window.innerHeight
 		}
 
-		container.style.height = h * 2 + "px"
+		document.getElementById('body')[0].style.height = h + 200 + 'px'
+		// container.style.height = h * 2 + "px"
 		window.scrollTo(0, 1)
 		h = window.innerHeight + 2
 
-		// container.style.height = h + 'px'
+		container.style.height = h + 'px'
 		container.style.width = w + 'px'
 		container.style.padding = 0
 
