@@ -91,20 +91,20 @@ var Game = new function() {
 			container.style.width = w + 'px'
 			container.style.padding = 0
 
-			if(h >= this.canvas.height * 1.75 || w >= this.canvas.height * 1.75) {
-				this.canvasMultiplier = 2
-				this.canvas.width = w / 2
-				this.canvas.height = h / 2
-				this.canvas.style.width = w + "px"
-				this.canvas.style.height = h + "px"
+			if(h >= Game.canvas.height * 1.75 || w >= Game.canvas.height * 1.75) {
+				Game.canvasMultiplier = 2
+				Game.canvas.width = w / 2
+				Game.canvas.height = h / 2
+				Game.canvas.style.width = w + "px"
+				Game.canvas.style.height = h + "px"
 			} else {
-				this.canvas.width = w
-				this.canvas.height = h
+				Game.canvas.width = w
+				Game.canvas.height = h
 			}
 
-			this.canvas.style.position = 'absolute'
-			this.canvas.style.left = '0px'
-			this.canvas.style.top = '0px'
+			Game.canvas.style.position = 'absolute'
+			Game.canvas.style.left = '0px'
+			Game.canvas.style.top = '0px'
 
 		}, 100)
 	}
